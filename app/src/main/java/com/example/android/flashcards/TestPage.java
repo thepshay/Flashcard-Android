@@ -131,6 +131,8 @@ public class TestPage extends AppCompatActivity {
         });
     }
 
+    //display word on start up, def is set invisible
+    //called when button is clicked
     private void displayWords(){
         int index = current;
         index--;
