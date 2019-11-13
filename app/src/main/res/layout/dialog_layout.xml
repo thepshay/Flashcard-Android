@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:fontFamily="sans-serif-black"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:fontFamily="sans-serif-black"
+        android:layout_below="@+id/nameEditText"/>
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Set Name"
+        android:layout_below="@id/name"/>
+
+    <EditText
+        android:id="@+id/desEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Set Description"
+        android:layout_below="@+id/description"
+        android:maxLength="50" />
+
+</RelativeLayout>

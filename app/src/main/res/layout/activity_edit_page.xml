@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditPage">
+
+    <EditText
+        android:id="@+id/wordsEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceLarge"
+        tools:text="Word"
+        android:singleLine="true"
+        android:hint="New Word"/>
+
+    <EditText
+        android:id="@+id/defEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wordsEditText"
+        tools:text="Definition"
+        android:lines="5"
+        android:gravity="top|left"
+        android:hint="Add a Definition" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add New Word"
+        android:layout_below="@id/defEditText"/>
+
+    <Button
+        android:id="@+id/testButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Test yourself"
+        android:layout_below="@id/addButton"/>
+
+    <ListView
+        android:id="@+id/wordsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/testButton"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="2dp" />
+
+</RelativeLayout>

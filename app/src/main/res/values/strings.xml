@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Flashcards</string>
+    <string name="title_activity_edit_page">EditPage</string>
+    <string name="title_activity_test_page">test_page</string>
+</resources>

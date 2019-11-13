@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/wordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Word"
+        android:fontFamily="sans-serif-black"/>
+
+    <TextView
+        android:id="@+id/defTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Definition"
+        android:fontFamily="sans-serif-black"
+        android:layout_below="@+id/editWordEditText"/>
+
+    <EditText
+        android:id="@+id/editWordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wordTV"/>
+
+    <EditText
+        android:id="@+id/editDefEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/defTV"/>
+
+</RelativeLayout>
