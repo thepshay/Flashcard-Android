@@ -142,6 +142,7 @@ public class TestPage extends AppCompatActivity {
         defText.setVisibility(View.GONE);
     }
 
+    //when ever the image is clicked on
     private void wordInteractions(){
         if(defText.getVisibility()==View.GONE){
             Log.d(TAG, "Gone");
