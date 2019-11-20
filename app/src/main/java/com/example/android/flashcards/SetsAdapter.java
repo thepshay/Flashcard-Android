@@ -19,16 +19,30 @@ public class SetsAdapter extends ArrayAdapter<Sets> {
 
 
     public View getView(int position, View convertView, @NonNull ViewGroup parent){
-        View listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_view, parent, false);
+
+        ViewHolder holder;
+
+        if (convertView == null){
+            convertView = LayoutInflater.from(getContext())
+                    .inflate(R.layout.list_view, parent, false);
+            holder = new ViewHolder();
+            holder.desTextView = convertView.findViewById(R.id.dbDesTextView);
+            holder.nameTextView = convertView.findViewById(R.id.dbDesTextView);
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
+        }
 
         Sets set = getItem(position);
 
-        TextView nameTextView = listItemView.findViewById(R.id.dbNameTextView);
-        TextView desTextView = listItemView.findViewById(R.id.dbDesTextView);
+        holder.nameTextView.setText(set.getName());
+        holder.desTextView.setText(set.getDes());
 
-        nameTextView.setText(set.getName());
-        desTextView.setText(set.getDes());
+        return convertView;
+    }
 
-        return listItemView;
+    class ViewHolder {
+        private TextView nameTextView;
+        private TextView desTextView;
     }
 }

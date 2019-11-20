@@ -16,17 +16,30 @@ public class WordsAdapter extends ArrayAdapter<Words> {
     }
 
     public View getView(int position, View convertView, ViewGroup parent){
-        View listItemView = LayoutInflater.from(getContext()).inflate(R.layout.words_list_view, parent, false);
+        ViewHolder holder;
+
+        if (convertView == null){
+            convertView = LayoutInflater.from(getContext())
+                    .inflate(R.layout.words_list_view, parent, false);
+            holder = new ViewHolder();
+            holder.defTextView = convertView.findViewById(R.id.defTextView);
+            holder.wordTextView = convertView.findViewById(R.id.wordsTextView);
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
+        }
 
         Words word = getItem(position);
 
-        TextView wordTextView = listItemView.findViewById(R.id.wordsTextView);
-        TextView defTextView = listItemView.findViewById(R.id.defTextView);
+        holder.wordTextView.setText(word.getWord());
+        holder.defTextView.setText(word.getDefinition());
 
-        wordTextView.setText(word.getWord());
-        defTextView.setText(word.getDefinition());
+        return convertView;
+    }
 
-        return listItemView;
+    class ViewHolder{
+        private TextView wordTextView;
+        private TextView defTextView;
     }
 
 }

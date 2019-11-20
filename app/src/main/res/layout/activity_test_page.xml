@@ -10,8 +10,8 @@
         android:id="@+id/cardImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/numLeftTextView"
-        app:srcCompat="@drawable/card" />
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/flashcard" />
 
     <TextView
         android:id="@+id/numLeftTextView"
@@ -51,4 +51,5 @@
         android:layout_alignParentRight="true"
         android:layout_margin="32dp"
         android:text="next"/>
+
 </RelativeLayout>

@@ -142,6 +142,8 @@ public class TestPage extends AppCompatActivity {
         wordText.setText(tempWord.getWord());
         defText.setText(tempWord.getDefinition());
         defText.setVisibility(View.GONE);
+
+
     }
 
     //when ever the image is clicked on
