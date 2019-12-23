@@ -19,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -107,10 +108,16 @@ public class EditPage extends AppCompatActivity {
         String word = wordEditText.getText().toString();
         String def = defEditText.getText().toString();
 
+        if(word.isEmpty() || def.isEmpty()){
+            Toast.makeText(this, "Please enter a value", Toast.LENGTH_SHORT).show();
+            return;
+        } else {
+            AddWord(tempId, word, def);
+        }
+
         wordEditText.getText().clear();
         defEditText.getText().clear();
 
-        AddWord(tempId, word, def);
     }
 
     //Add new word to db and set

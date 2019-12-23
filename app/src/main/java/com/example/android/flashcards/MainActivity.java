@@ -92,7 +92,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 String name = nameEditText.getText().toString();
                 String des = desEditText.getText().toString();
-                AddSets(name, des);
+
+                if(name.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Please enter a set name", Toast.LENGTH_SHORT).show();
+                } else {
+                    AddSets(name, des);
+                }
             }
         });
         builder.show();

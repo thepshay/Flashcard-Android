@@ -20,18 +20,23 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="32dp"
+        android:textSize="32dp"
         tools:hint="Card 1/12" />
 
     <TextView
         android:id="@+id/wordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:fontFamily="sans-serif-black"
+        android:textAppearance="?android:textAppearanceLarge"
         android:layout_centerInParent="true" />
 
     <TextView
         android:id="@+id/defText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:fontFamily="sans-serif-black"
+        android:textAppearance="?android:textAppearanceLarge"
         android:layout_centerInParent="true" />
 
     <Button

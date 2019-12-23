@@ -27,7 +27,7 @@ public class SetsAdapter extends ArrayAdapter<Sets> {
                     .inflate(R.layout.list_view, parent, false);
             holder = new ViewHolder();
             holder.desTextView = convertView.findViewById(R.id.dbDesTextView);
-            holder.nameTextView = convertView.findViewById(R.id.dbDesTextView);
+            holder.nameTextView = convertView.findViewById(R.id.dbNameTextView);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
